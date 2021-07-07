@@ -65,7 +65,7 @@ def new_customer():
             else:
                 milk_in_machine = reduce(milk_in_machine, milk(choice))
             if not check(coffee_in_machine, coffee(choice)): # if coffee in the machine is not enough to make the coffee
-                print(f'Sorry, not enough coffee {choice}')
+                print(f'Sorry, not enough coffee to make {choice}')
             else:
                 coffee_in_machine = reduce(coffee_in_machine, coffee(choice))
             cost += cost_to_pay(choice)
