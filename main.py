@@ -29,7 +29,7 @@ def check(a, b):
 def reduce(a, b):
     return a - b
 
-
+# TODO: 2. Serving the customer
 def new_customer():
     global choice
     water_in_machine = resources['water']
@@ -39,7 +39,7 @@ def new_customer():
 
     serving = True
     while serving:
-
+    # TODO 3: 3. Let the customer choose drink
         choice = input("\nWhat would you like? ('espresso','latte', 'cappuccino') or "
                        "'report' to show the resources or "
                        "'ok' to finish choosing : ")
@@ -55,6 +55,7 @@ def new_customer():
             print(f"Cappuccino price: {MENU['cappuccino']['cost']}$")
 
         elif choice != 'report' and choice != 'ok':
+            #TODO: Check the resource in the machine
             if not check(water_in_machine, water(choice)): # if water in the machine is not enough to make the coffee
                 print(f'Sorry, not enough water to make {choice}')
             else:
@@ -75,6 +76,7 @@ def new_customer():
             print(f'Your bills is {cost}$\n')
             serving = False
 
+    # TODO: 4. Customer's Payment
     if cost != 0: # if the customer don't want to pay(cost = 0) , stop the machine
         paying = True
         while paying:
@@ -104,7 +106,7 @@ def new_customer():
         print("\nSee you later!")
 
 
-# Turn on the machine
+# TODO: 1.Turn on the machine
 begin = input("Turn on the machine? 'on' or 'off': ")
 while begin == 'on':
     print("\nPlease wait while the coffee machine is refilling...")
