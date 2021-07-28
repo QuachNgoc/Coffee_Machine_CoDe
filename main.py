@@ -29,7 +29,7 @@ def check(a, b):
 def reduce(a, b):
     return a - b
 
-# TODO: 2. Serving the customer
+# TODO: 2. Serving the new customer
 def new_customer():
     global choice
     water_in_machine = resources['water']
